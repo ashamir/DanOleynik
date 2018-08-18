@@ -1,0 +1,17 @@
+li {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 48px;
+  float: left;
+  margin: 20px;
+  background-image: url(https://randomuser.me/img/card_icons.png);
+  background-size: 378px;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+
+  &:before {
+    content: attr(data-label);
+    opacity: 0;
+  }
+}

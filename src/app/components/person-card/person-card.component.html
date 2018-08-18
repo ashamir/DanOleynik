@@ -1,0 +1,14 @@
+<div class="frame card_offset">
+  <div class="card">
+    <div class="details">
+      <div class="user_photo horizontal_center">
+        <img [src]="personImage">
+      </div>
+      <p id="user_title">{{personInfoTitle}}</p>
+      <p id="user_value">{{personInfoValue}}</p>
+    </div>
+    <ul class="values_list horizontal_center">
+      <app-person-info  *ngFor="let info of infos;" (activateInfo)="setInfo($event)" [personInfoViewModel]="info" ></app-person-info>
+    </ul>
+  </div>
+</div>

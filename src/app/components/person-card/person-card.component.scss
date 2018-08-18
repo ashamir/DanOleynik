@@ -1,0 +1,71 @@
+.horizontal_center{
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+.frame {
+  flex-grow: 1;
+  max-width: 730px;
+  margin: auto;
+  overflow: hidden;
+  &.card_offset{
+    margin-top:100px;
+  }
+}
+.card{
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgba(0,0,0,.5);
+  overflow: hidden;
+  text-align: center;
+  z-index: 5;
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    top: 0;
+    background: #f9f9f9;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    z-index: -1;
+  }
+  .user_photo{
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,.25);
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+    }
+  }
+  #user_title {
+    color: #999;
+    font-size: 18px;
+    margin: 0;
+  }
+  #user_value {
+    color: #2c2e31;
+    font-size: 38px;
+    margin: 5px;
+    text-transform: capitalize;
+  }
+}
+.values_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: left;
+  box-shadow: 0 0 black;
+}
